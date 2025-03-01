@@ -1,14 +1,13 @@
 body{
-background-color: #212661;
-}
+  background-color: #212661;
+  }
 
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #dddddd
     overflow: hidden;
-    background-color: #333;
+   
 }
 
 li{
@@ -17,14 +16,84 @@ li{
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: navy;
+    color: white;
   }
 
   li a {
     display: block;
-    color: white;
+    color: navy;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
+ 
+#welcome{
+  background-image: url('rccg-image.jpg'); /* adjust path if needed */
+  background-size: cover; /* makes sure the image covers the entire section */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat; /* prevents the image from repeating */
+  height: 100vh; /* makes the section take the full viewport height */
+  text-align: center;
+  color:white;
+}
+
+h1{
+  font-size:4em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px ;
+}
+
+nav{
+  display: flex;
+  align-items: flex-start;
+}
+
+#logo{
+  width: 1%;
   
+}
+
+#Church_Name{
+  font-family: Arial, Helvetica, sans-serif;
+  color:navy;
+}
+
+#container2{
+  display: flex;
+  justify-content: space-around;
+}
+
+.item{
+ 
+  flex-grow: 1;
+}
+
+.triple{
+  flex-grow: 2;
+}
+
+#welcome_paragraph{
+  font-size: 150%;
+  margin-top: 0;
+
+}
+
+#Join_Us{
+    border-radius:25px;
+    padding:20px;
+    border:none;
+    font-size: 23px;
+    font:Arial, Helvetica, sans-serif;
+
+}
+
+#Join_Us:hover{
+  background-color: lightblue;
+  color: blue;
+}
