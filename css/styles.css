@@ -1,99 +1,358 @@
-body{
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   background-color: #212661;
-  }
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-   
+  font-family: Verdana, sans-serif;
 }
 
-li{
-    display: inline;
-    float: left;
-}
-
-li a:hover {
-    background-color: navy;
-    color: white;
-  }
-
-  li a {
-    display: block;
-    color: navy;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
- 
-#welcome{
-  background-image: url('rccg-image.jpg'); /* adjust path if needed */
-  background-size: cover; /* makes sure the image covers the entire section */
-  background-position: center; /* centers the image */
-  background-repeat: no-repeat; /* prevents the image from repeating */
-  height: 100vh; /* makes the section take the full viewport height */
-  text-align: center;
-  color:white;
-}
-
-h1{
-  font-size:4em;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px ;
-}
-
-nav{
+/* Navigation Styles */
+nav {
   display: flex;
   align-items: flex-start;
 }
 
-#logo{
-  width: 1%;
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: navy;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: navy;
+  color: white;
+}
+
+/* Welcome Section */
+#welcome {
+  background-image: url('rccg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#welcome_paragraph {
+  font-size: 150%;
+  margin-top: 0;
+}
+
+#Join_Us {
+  border-radius: 25px;
+  padding: 20px;
+  border: none;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Join_Us:hover {
+  background-color: lightblue;
+  color: blue;
+}
+
+/* Section Headings */
+h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Who We Are Section */
+#who-we-are {
+  clear: both;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.column {
+  flex: 1 0 50%;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Carousel Styles */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  vertical-align: middle;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Carousel Navigation */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Carousel Indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Stats Section */
+#temi {
+  display: block;
+  padding: 40px 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.column2 {
+  flex: 1 0 25%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Other Sections */
+section {
+  display: block;
+}
+
+#Services {
+  background-image: url('Worshipperpicture4copy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 1 0 100%;
+  }
+ 
+  .column2 {
+    flex: 1 0 50%;
+  }
+ 
+  h1 {
+    font-size: 2.5em;
+  }
+ 
+  #welcome_paragraph {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
+
+/* Animations */
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+#Join_on_Youtube{
+  border-radius: 25px;
+  padding: 20px;
+  border: none;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#Join_on_Youtube:hover {
+  background-color: lightblue;
+  color: blue;
+}
+
+#Join_on_Zoom{
+  border-radius: 25px;
+  padding: 20px;
+  border: none;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Join_on_Zoom:hover {
+  background-color: lightblue;
+  color: blue;
+}
+
+.column3 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 25px;
+ margin-right: 40px;
+ ;
+}
+
+/* Clear floats after the columns */
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column3 p{
+  margin-bottom: 30px;
+}
+h3 p{
+ margin-bottom: 40px;
+}
+
+.column4 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 25px;
+ margin-right: 40px;
+ font-size: 20px
+ ;
+}
+
+/* Clear floats after the columns */
+.row4:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#Events{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2{
+  font-size: 40px;
+}
+
+.column5 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row5:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column5 p{
+  color: white;
+  font-size: 25px;
   
 }
 
-#Church_Name{
+#donation{
+  width: 800px;
+  height: 600px;
+
+  
+}
+
+#Give_Online{
+  border-radius: 25px;
+  padding: 20px;
+  border: none;
+  font-size: 23px;
   font-family: Arial, Helvetica, sans-serif;
-  color:navy;
 }
 
-#container2{
-  display: flex;
-  justify-content: space-around;
-}
-
-.item{
- 
-  flex-grow: 1;
-}
-
-.triple{
-  flex-grow: 2;
-}
-
-#welcome_paragraph{
-  font-size: 150%;
-  margin-top: 0;
-
-}
-
-#Join_Us{
-    border-radius:25px;
-    padding:20px;
-    border:none;
-    font-size: 23px;
-    font:Arial, Helvetica, sans-serif;
-
-}
-
-#Join_Us:hover{
+#Give_Online:hover {
   background-color: lightblue;
   color: blue;
 }
